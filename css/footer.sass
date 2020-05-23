@@ -1,0 +1,115 @@
+.footer {
+  background: $color_violet;
+  padding: 5rem $padding;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$media-sm-plus-up} {
+    flex-direction: row-reverse;
+    padding: 5rem calc(#{ $padding } * .8) 6rem calc(#{ $padding } / 2); }
+
+  &__menu {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+    @media #{$media-sm-plus-up} {
+      flex-direction: row; } }
+
+  &__col {
+    &:nth-child(1) {
+      flex-basis: 100%;
+      padding: 0;
+
+      @media #{$media-sm-plus-up} {
+        flex-basis: 22%;
+        padding: 5.1rem 0 0 calc(#{ $padding } * .9); } }
+
+    &:nth-child(2) {
+      flex-basis: 100%;
+      padding: 0;
+
+      @media #{$media-sm-plus-up} {
+        flex-basis: 78%;
+        padding: 0 calc(8.33vw / 2) 0 $padding; }
+
+      @media #{$media-md-up} {
+        padding: 0 calc(#{ $padding } / 2) 0 calc(#{ $padding } * 2); } } }
+
+  &__logo {
+    display: none;
+
+    @media #{$media-sm-plus-up} {
+      display: block;
+      padding-bottom: 3rem; } }
+
+  &__24 {
+    font-size: 3rem;
+    font-weight: bold; }
+
+  &__mail {
+    color: $color_accent; }
+
+  &__header {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+    @media #{$media-sm-plus-up} {
+      font-size: 1.2rem; } }
+
+  &__submenu {
+    display: none;
+
+    @media #{$media-sm-plus-up} {
+      display: flex;
+      justify-content: space-between;
+      max-height: 10rem;
+      transition: max-height .4s ease-out;
+      overflow: hidden; }
+
+    &-link {
+      color: $color_white;
+      font-size: 1.2rem;
+      line-height: 1.1em; }
+
+    &-col {
+      text-align: left; }
+
+    &_active {
+      max-height: 100%; } }
+
+  &__more {
+    display: none;
+
+    @media #{$media-sm-plus-up} {
+      padding-top: 3rem;
+      display: block;
+      width: fit-content;
+      margin: 0 auto; } }
+
+  &__less {
+    display: none;
+
+    @media #{$media-sm-plus-up} {
+      padding-top: 3rem;
+      width: fit-content;
+      margin: 0 auto; } }
+
+  &__link {
+    text-transform: uppercase;
+    display: block;
+    color: $color_white;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+
+    @media #{$media-sm-plus-up} {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-left: 2rem; }
+
+    &:first-of-type {
+      margin-top: 3rem;
+
+      @media #{$media-sm-plus-up} {
+        margin-top: 0; } } } }

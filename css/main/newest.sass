@@ -1,0 +1,25 @@
+.newest {
+  padding: 5rem $padding;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+  &__col {
+    flex-basis: 100%;
+
+    @media #{$media-sm-plus-up} {
+      flex-basis: calc(33% - 1.5rem); }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+
+      @media #{$media-sm-plus-up} {
+        display: block; } } }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem; } }

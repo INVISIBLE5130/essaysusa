@@ -1,0 +1,36 @@
+.wait {
+  display: flex;
+  padding: 5rem $padding;
+  background: $color_accent;
+
+  @media #{$media-sm-plus-up} {
+    padding: 10rem $padding; }
+
+  &__block {
+    overflow: hidden; }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$media-sm-plus-up} {
+      flex-direction: row; } }
+  &__col {
+    flex-basis: 50%;
+
+    &:nth-child(1) {
+      padding-bottom: 5rem;
+      padding-right: 0;
+
+      @media #{$media-sm-plus-up} {
+        padding-right: 2rem; } } }
+
+  &__title {
+    font-size: 5.6rem;
+    line-height: 0.8em;
+
+    @media #{$media-sm-plus-up} {
+      font-size: 9rem; } }
+
+  &__btn {
+    margin-top: 2rem; } }

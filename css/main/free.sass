@@ -1,0 +1,19 @@
+.free {
+  padding: 0;
+
+  @media #{$media-sm-plus-up} {
+    padding: 0 calc(#{ $padding } / 2); }
+
+  &__wrap {
+    background: linear-gradient(rgba(60, 25, 77, 0.7) 100%, rgba(60, 25, 77, 0.7) 100%), url("/img/main/free-bg.jpg") no-repeat center/cover;
+    padding: 5.4rem calc(#{ $padding } / 2);
+
+    @media #{$media-sm-plus-up} {
+      padding: calc(#{ $padding } / 2); } }
+
+  &__button {
+    margin-top: 2rem; }
+
+  &__content {
+    border: 1px solid $color_white;
+    padding: 5.4rem $padding; } }

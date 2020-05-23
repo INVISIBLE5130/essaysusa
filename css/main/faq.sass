@@ -1,0 +1,123 @@
+.faq {
+  padding: 5rem $padding;
+
+  &__content {
+    display: flex; }
+
+  &__col {
+    flex-basis: 100%;
+
+    @media #{$media-sm-plus-up} {
+      flex-basis: 50%; }
+
+    &:nth-child(2) {
+      display: none;
+
+      @media #{$media-sm-plus-up} {
+        border-left: 6px solid $color_accent;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        display: block;
+        padding-left: $padding; } } } }
+
+.tab {
+  &__link {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.3em;
+    outline: none;
+    padding: 1.5rem $padding 1.5rem 0;
+    text-align: left;
+    color: $color_primary;
+    width: 100%;
+    position: relative;
+    font-family: $font-family;
+
+    &-wrap {
+      margin-top: 5rem;
+      padding-bottom: 5rem; }
+
+    &-image {
+      display: block;
+      height: 2rem;
+      position: absolute;
+      right: 0;
+      top: calc(50% - 1.5rem);
+      transform: rotate(-90deg);
+      transition: .4s;
+      width: 2rem;
+
+      @media #{$media-sm-plus-up} {
+        display: none;
+        opacity: 0; }
+
+      &_desk {
+        display: none;
+        opacity: 0;
+        transition: .4s;
+
+        @media #{$media-sm-plus-up} {
+          display: none;
+          opacity: 0; } } }
+
+    &_active {
+      font-weight: bold;
+      position: relative;
+
+      &::before {
+        background: $color_accent;
+        width: 1rem;
+        position: absolute;
+        top: 1.5rem;
+        bottom: 0;
+        left: -#{$padding};
+        content: ''; }
+
+      .tab__link {
+        &-image {
+          transform: rotate(0);
+          opacity: 1;
+
+          @media #{$media-sm-plus-up} {
+            display: none; }
+
+          &_desk {
+            display: none;
+
+            @media #{$media-sm-plus-up} {
+              display: block;
+              position: absolute;
+              right: -2.3rem;
+              width: 4rem;
+              top: 0;
+              opacity: 1; } } } } } }
+
+  &__content {
+    display: none;
+    opacity: 0;
+    transition: .5s;
+
+    &_mobile {
+      display: none;
+
+      &_active {
+        display: block;
+        position: relative;
+        opacity: 1;
+
+        &::before {
+          background: $color_accent;
+          width: 1rem;
+          position: absolute;
+          top: -1.5rem;
+          bottom: 0;
+          left: -#{$padding};
+          content: ''; } } }
+
+    &_active {
+      display: block;
+      opacity: 1; } } }
